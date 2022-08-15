@@ -29,6 +29,12 @@ public class BookMenuController {
 
     }
 
+    @GetMapping("/azerbaijan/romantic/{id}")
+    public ArrayList<BookDto> getAzerbaijaniRomanticById() {
+        return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.ROMANTIC);
+        //salam eadsadasdewdeasdas
+    }
+
   @GetMapping("/azerbaijan/science")
    public ArrayList<BookDto> getAzerbaijaniScienceBooks() {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.SCIENCE);
