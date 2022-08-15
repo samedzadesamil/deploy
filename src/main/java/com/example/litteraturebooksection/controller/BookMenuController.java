@@ -30,6 +30,7 @@ public class BookMenuController {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.ROMANTIC);
         //salam eadsadasdewdeasdas\
         // eleyke salam ashgajsagskjd
+        //deyisiklik
     }
     @GetMapping("/azerbaijan/romantic/{id}")
     public ArrayList<BookDto> getAzerbaijani() {
