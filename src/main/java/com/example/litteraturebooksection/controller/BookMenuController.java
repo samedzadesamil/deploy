@@ -6,10 +6,7 @@ import com.example.litteraturebooksection.model.dto.BookDto;
 import com.example.litteraturebooksection.model.entity.Book;
 import com.example.litteraturebooksection.service.impl.BookServiceImpl;
 import lombok.Builder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -18,7 +15,6 @@ import java.util.ArrayList;
 public class BookMenuController {
 
     private final BookServiceImpl bookService;
-
     public BookMenuController(BookServiceImpl bookService) {
         this.bookService = bookService;
     }
@@ -32,7 +28,13 @@ public class BookMenuController {
     @GetMapping("/azerbaijan/romantic/{id}")
     public ArrayList<BookDto> getAzerbaijaniRomanticById() {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.ROMANTIC);
-        //salam eadsadasdewdeasdas
+        //salam eadsadasdewdeasdas\
+        // eleyke salam ashgajsagskjd
+    }
+    @GetMapping("/azerbaijan/romantic/{id}")
+    public ArrayList<BookDto> getAzerbaijani() {
+        return null;
+
     }
 
   @GetMapping("/azerbaijan/science")
@@ -40,10 +42,19 @@ public class BookMenuController {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.SCIENCE);
 
     }
+    @GetMapping("/azerbaijan/science/{id}")
+    public ArrayList<BookDto> getAzerbaiani(@PathVariable(name = "id" ) Long id) {
+        return  null;
+
+    }
 
     @GetMapping("/azerbaijani/classics")
     public ArrayList<BookDto> getAzerbaijaniClassicBooks() {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.CLASSICS);
+    }
+    @GetMapping("/azerbaijani/classics/{id}")
+    public ArrayList<BookDto> getAzerbaijaniClassic() {
+        return null;
     }
 
     @GetMapping("/azerbaijani/roman")
@@ -51,9 +62,18 @@ public class BookMenuController {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.ROMANS);
 
     }
+    @GetMapping("/azerbaijani/roman/{id}")
+    public ArrayList<BookDto> getAzerbaijaniRoman() {
+        return null;
+
+    }
 
     @GetMapping("/azerbaijani/motivation")
     public ArrayList<BookDto> getAzerbaijaniMotivationBooks() {
+        return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.MOTIVATION);
+    }
+    @GetMapping("/azerbaijani/motivation")
+    public ArrayList<BookDto> getAzerbaijaniMotivationBoo() {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.MOTIVATION);
     }
 // -------------------------------------------------------------------
