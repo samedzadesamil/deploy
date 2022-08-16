@@ -14,5 +14,6 @@ public interface BookService {
       ArrayList<BookDto> searchForName(String name);
       ArrayList<BookDto> searchForAuthor(String author);
       ArrayList<BookDto> searchForPublishingHouse(String publishingHouse);
+      BookDto searchForId(long id);
 
 }

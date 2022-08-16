@@ -134,5 +134,19 @@ public class BookServiceImpl implements BookService {
         }
         return bookDtoArrayList;    }
 
-
+    @Override
+    public BookDto searchForId(long id) {
+        Book book=bookRepository.getBookById(id);
+        BookDto bookDto=BookDto.builder()
+                .name(book.getName())
+                .author(book.getAuthor())
+                .page(book.getPage())
+                .genre(book.getGenre())
+                .publishingHouse(book.getPublishingHouse())
+                .language(book.getLanguage())
+                .price(book.getPrice())
+                .about(book.getAbout())
+                .build();
+        return bookDto;
+    }
 }

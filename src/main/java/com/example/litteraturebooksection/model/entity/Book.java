@@ -33,7 +33,7 @@ public class Book {
     @Column(name = "book_genre",nullable = false, length = 50)
     private EGenres genre;
 
-    @Column(name = "publishingHouse", length = 100)
+    @Column(name = "publishing_House", length = 100)
     private String publishingHouse;
 
     @Enumerated(EnumType.STRING)
@@ -43,7 +43,7 @@ public class Book {
     @Column(name = "book_price", nullable = false, length = 10)
     private Double price;
 
-    @Column(name = "book_addingTime")
+    @Column(name = "book_adding_Time")
     private LocalDateTime addingTime;
 
     @Column(name="sales_price",length = 10)

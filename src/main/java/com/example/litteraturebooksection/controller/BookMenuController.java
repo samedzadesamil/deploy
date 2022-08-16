@@ -25,38 +25,14 @@ public class BookMenuController {
 
     }
 
-    @GetMapping("/azerbaijan/romantic/{id}")
-    public ArrayList<BookDto> getAzerbaijaniRomanticById() {
-        return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.ROMANTIC);
-        //salam eadsadasdewdeasdas\
-        // eleyke salam ashgajsagskjd
-        //deyisiklik23
-        //deyisiklik3553
-    }
-    @GetMapping("/azerbaijan/romantic/{id}")
-    public ArrayList<BookDto> getAzerbaijani() {
-        return null;
-
-    }
-
   @GetMapping("/azerbaijan/science")
    public ArrayList<BookDto> getAzerbaijaniScienceBooks() {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.SCIENCE);
 
     }
-    @GetMapping("/azerbaijan/science/{id}")
-    public ArrayList<BookDto> getAzerbaiani(@PathVariable(name = "id" ) Long id) {
-        return  null;
-
-    }
-
     @GetMapping("/azerbaijani/classics")
     public ArrayList<BookDto> getAzerbaijaniClassicBooks() {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.CLASSICS);
-    }
-    @GetMapping("/azerbaijani/classics/{id}")
-    public ArrayList<BookDto> getAzerbaijaniClassic() {
-        return null;
     }
 
     @GetMapping("/azerbaijani/roman")
@@ -64,20 +40,12 @@ public class BookMenuController {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.ROMANS);
 
     }
-    @GetMapping("/azerbaijani/roman/{id}")
-    public ArrayList<BookDto> getAzerbaijaniRoman() {
-        return null;
-
-    }
 
     @GetMapping("/azerbaijani/motivation")
     public ArrayList<BookDto> getAzerbaijaniMotivationBooks() {
         return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.MOTIVATION);
     }
-    @GetMapping("/azerbaijani/motivation")
-    public ArrayList<BookDto> getAzerbaijaniMotivationBoo() {
-        return bookService.booksCatalogForLangAndGenre(ELanguage.AZERBAIJAN, EGenres.MOTIVATION);
-    }
+
 // -------------------------------------------------------------------
 
     @GetMapping("/english/romantic")
@@ -176,5 +144,8 @@ public class BookMenuController {
     public ArrayList<BookDto> searchBookPublishingHouse(@PathVariable(name = "house") String house) {
         return bookService.searchForPublishingHouse(house);    }
 
-
+    @GetMapping("/searchId/{id}")
+    public BookDto searchBookById(@PathVariable(name = "id") int id){
+        return bookService.searchForId(id);
+    }
 }
