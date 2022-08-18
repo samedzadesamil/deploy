@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 @Service
 public interface UserService {
-    public UsersDto getById(int id);
+    public UsersDto getById(long id);
 
     public UsersDto getByNameAndSurname(String name, String surname);
 

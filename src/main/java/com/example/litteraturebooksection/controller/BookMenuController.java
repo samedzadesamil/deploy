@@ -114,7 +114,9 @@ public class BookMenuController {
 
     @GetMapping("/russian/motivation")
     public ArrayList<BookDto> getRussianMotivationBooks() {
-        return bookService.booksCatalogForLangAndGenre(ELanguage.RUSSIAN, EGenres.MOTIVATION);    }
+        return bookService.booksCatalogForLangAndGenre(ELanguage.RUSSIAN, EGenres.MOTIVATION);
+    }
+
 
     //--------------------------------------------------------------------------------------------------
 
@@ -149,3 +151,4 @@ public class BookMenuController {
         return bookService.searchForId(id);
     }
 }
+

@@ -15,7 +15,7 @@ public class UsersDto {
     private String name;
     private String surname;
     private String username;
-    private Date dateOfBirds;
+   // private Date dateOfBirds;
     private String email;
     private String number;
     private String location;
